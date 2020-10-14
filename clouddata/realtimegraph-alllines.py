@@ -36,7 +36,7 @@ def animate(i):
 
     # Store all the necessary data for plotting in corresponding variables
     device_id = data[0]['device_id']
-    timestamp.extend([item['timestamp'].split()[1] for item in data])  # Get only time value from the timestamp using split and "[1]"
+    timestamp.extend([(item['timestamp'].split()[1])[:-4] for item in data])           # Get only time value from the timestamp using split and "[1]". The -4 removes the millisecond value
     accelerometer = [item['accelerometer'] for item in data]
     split_axes(accelerometer, acc_x, acc_y, acc_z)
     gyroscope = [item['gyroscope'] for item in data]

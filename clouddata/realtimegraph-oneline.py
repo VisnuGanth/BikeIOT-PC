@@ -33,7 +33,7 @@ def animate(i):
     data = (response.get('Items'))
 
     # Store all the necessary data for plotting in corresponding variables
-    timestamp.extend([item['timestamp'].split()[1] for item in data])           # Get only time value from the timestamp using split and "[1]"
+    timestamp.extend([(item['timestamp'].split()[1])[:-4] for item in data])           # Get only time value from the timestamp using split and "[1]". The -4 removes the millisecond value
 
     magnetometer = [item['magnetometer'] for item in data]
     split_axes(magnetometer, mag_x, mag_y, mag_z)

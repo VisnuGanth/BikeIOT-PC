@@ -21,7 +21,16 @@
   <component name="ChangeListManager">
     <list default="true" id="985ddb95-cb16-40f9-a489-3a055d45b407" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/Doc1 - (IMU_Data.py) Get data from Emulator.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/Doc1 - (IMU_Data.py) Get data from Emulator.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/Doc2 - (AWSPubSub.py) AWS IoT and Pi setup.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/Doc2 - (AWSPubSub.py) AWS IoT and Pi setup.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/Doc5 - (static_graph.py) Setting up boto3 and getting data from DynamoDB.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/Doc5 - (static_graph.py) Setting up boto3 and getting data from DynamoDB.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/Doc6 - (realtimedata.py) Getting data in real time from cloud.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/Doc6 - (realtimedata.py) Getting data in real time from cloud.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/Doc7 - (realtimegraph - alllines.py) Plot graph with real time data from cloud.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/Doc7 - (realtimegraph - alllines.py) Plot graph with real time data from cloud.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clouddata/realtimedata.py" beforeDir="false" afterPath="$PROJECT_DIR$/clouddata/realtimedata.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clouddata/realtimegraph-alllines.py" beforeDir="false" afterPath="$PROJECT_DIR$/clouddata/realtimegraph-alllines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clouddata/realtimegraph-movingxaxis.py" beforeDir="false" afterPath="$PROJECT_DIR$/clouddata/realtimegraph-movingxaxis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clouddata/realtimegraph-oneline.py" beforeDir="false" afterPath="$PROJECT_DIR$/clouddata/realtimegraph-oneline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clouddata/static_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/clouddata/static_graph.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +57,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.realtimegraph-movingxaxis">
+  <component name="RunManager" selected="Python.static_graph">
     <configuration name="realtimegraph-alllines" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BikeIOT-PC" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -91,10 +100,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="static_graph" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BikeIOT-PC" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/clouddata" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clouddata/static_graph.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.realtimegraph-movingxaxis" />
+        <item itemvalue="Python.static_graph" />
         <item itemvalue="Python.realtimegraph-alllines" />
+        <item itemvalue="Python.realtimegraph-movingxaxis" />
       </list>
     </recent_temporary>
   </component>
@@ -119,23 +150,24 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1515" height="217" key="GridCell.Tab.0.bottom" timestamp="1602573660103">
+    <state width="1515" height="216" key="GridCell.Tab.0.bottom" timestamp="1602666623321">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="217" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602573660103" />
-    <state width="1515" height="217" key="GridCell.Tab.0.center" timestamp="1602573660103">
+    <state width="1515" height="216" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602666623321" />
+    <state width="1515" height="216" key="GridCell.Tab.0.center" timestamp="1602666623321">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="217" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602573660103" />
-    <state width="1515" height="217" key="GridCell.Tab.0.left" timestamp="1602573660103">
+    <state width="1515" height="216" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602666623321" />
+    <state width="1515" height="216" key="GridCell.Tab.0.left" timestamp="1602666623321">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="217" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602573660103" />
-    <state width="1515" height="217" key="GridCell.Tab.0.right" timestamp="1602573660103">
+    <state width="1515" height="216" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602666623321" />
+    <state width="1515" height="216" key="GridCell.Tab.0.right" timestamp="1602666623321">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="217" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602573660103" />
+    <state width="1515" height="216" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602666623321" />
   </component>
 </project>
