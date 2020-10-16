@@ -26,6 +26,21 @@ def split_axes(data, x, y, z):
     z.extend([item[2] for item in float_axes])
 
 
+#Function to move the x-axis as data is read.
+def move_axis():
+    global mag_x, mag_y, mag_z, acc_x, acc_y, acc_z, gyro_x, gyro_y, gyro_z, timestamp
+    timestamp = timestamp[-len(timestamp) + 2:]         #Removes the first two data from the list for the x-axis
+    mag_x = mag_x[-len(mag_x) + 2:]
+    mag_y = mag_y[-len(mag_y) + 2:]
+    mag_z = mag_z[-len(mag_z) + 2:]
+    acc_x = acc_x[-len(acc_x) + 2:]
+    acc_y = acc_y[-len(acc_y) + 2:]
+    acc_z = acc_z[-len(acc_z) + 2:]
+    gyro_x = gyro_x[-len(gyro_x) + 2:]
+    gyro_y = gyro_y[-len(gyro_y) + 2:]
+    gyro_z = gyro_z[-len(gyro_z) + 2:]
+
+
 # Plot graphs for all the data
 def animate(i):
 
@@ -81,6 +96,9 @@ def animate(i):
     plt.xlabel('timestamp')
     plt.xticks(rotation=45)
 
+    if len(timestamp) >= 20:    #If the data points are greater than 20, move the x-axis
+        move_axis()
+
 
 # Get all the initial data from the table
 response = table.scan(Select='ALL_ATTRIBUTES')
@@ -93,6 +111,9 @@ except IndexError:
     exit()
 
 lastevalkey = {k: lastitem.get(k) for k in lastitem.keys() if k in ['device_id', 'timestamp']}
+
+if response.get('Count') >= 20:                     #If the initial read count is more than 20, display starting from last 25
+    response['Items'] = response.get('Items')[-25:]
 
 time.sleep(0.550)           # Data is being sent at x second intervals. After initial read, we have to wait x sec until next data is sent to DB
 

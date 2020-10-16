@@ -23,13 +23,18 @@ def split_axes(data, x, y, z):
     y.extend([item[1] for item in float_axes])
     z.extend([item[2] for item in float_axes])
 
+#Function to move the x-axis as data is read.
+def move_axis():
+    global timestamp, mag_x
+    timestamp = timestamp[-len(timestamp) + 2:]         #Removes the first two data from the list for the x-axis
+    mag_x = mag_x[-len(mag_x) + 2:]
+
 
 # Plot graphs for all the data
 def animate(i):
 
     global response
     global lastevalkey
-    global timestamp, mag_x
 
     data = (response.get('Items'))
 
@@ -56,10 +61,8 @@ def animate(i):
     plt.xlabel('timestamp')
     plt.xticks(rotation=45)
 
-    #Uncomment for moving x-axis
-    # if len(timestamp) >= 20:
-    #     timestamp = timestamp[-len(timestamp) + 1:]
-    #     mag_x = mag_x[-len(mag_x) + 1:]
+    if len(timestamp) >= 20:    #If the data points are greater than 20, move the x-axis
+        move_axis()
 
 
 # Get all the initial data from the table
@@ -73,6 +76,10 @@ except IndexError:
     exit()
 
 lastevalkey = {k: lastitem.get(k) for k in lastitem.keys() if k in ['device_id', 'timestamp']}
+
+if response.get('Count') >= 20:                     #If the initial read count is more than 20, display starting from last 25
+    response['Items'] = response.get('Items')[-25:]
+
 
 time.sleep(0.550)                                 # Data is being sent at x sec intervals. After initial read, we have to wait x seconds until next data is sent to DB
 
